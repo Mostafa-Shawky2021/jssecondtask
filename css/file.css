@@ -1,3 +1,18 @@
+body {
+  font-family: tahoma;
+}
 a {
   display: block;
+  margin: 10px 0px;
+}
+button {
+  background-color: #212224;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  transform: all 0.5s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2c2e31;
 }

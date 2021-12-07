@@ -1,22 +1,28 @@
-var container, links, str, target;
+var btnConvert,container, links, containerContent, targetTo;
+btnConvert = document.getElementById("btn-convert");
 
-container = document.getElementById("container");
+function replaceElements()
+{
+    container  = document.getElementById("container");
 
-links     = document.getElementsByClassName("links");
+    links      = document.getElementsByClassName("links");
 
-str = container.innerHTML;
- 
-container.innerHTML = str.replaceAll("p","a")
-
-for( var i = 0; i < links.length; i++ ) {
+   
     
-    target = links[i].innerText;
-    links[i].setAttribute("href",`https://www.${target}.com`);
-    links[i].setAttribute("target","_blank");   
+    containerContent = container.innerHTML;
+     
+    container.innerHTML = containerContent.replace(/p/g,"a")
+    
+    for( var i = 0; i < links.length; i++ ) {
+        
+        target = links[i].innerText;
+        links[i].setAttribute("href",`https://www.${targetTo}.com`);
+        links[i].setAttribute("target","_blank");   
+    }
+    
 }
-
-
-
+console.log( btnConvert );
+btnConvert.addEventListener('click', replaceElements);
  
 
 
